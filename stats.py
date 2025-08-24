@@ -1,3 +1,11 @@
+def sort_on(items):
+    return items["num"]
+
+def convert_dic_to_dic_list(dic):
+    char_list_key_value = [{"char": k, "num": v} for k, v in dic.items()]
+    char_list_key_value.sort(reverse=True,key=sort_on)
+    return char_list_key_value
+
 def count_characters(book_str):
     dic = {}
 
